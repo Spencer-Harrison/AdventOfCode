@@ -26,7 +26,6 @@ int main() {
 	size_t calories = 0;
 	size_t lineCount = 0;
 	while (std::getline(infile, line)) {
-		++lineCount;
 		try {
 			if (line.compare("") == 0) {
 				elfCalorieList.insert(calories);
@@ -39,6 +38,7 @@ int main() {
 		catch (std::invalid_argument e) {
 			std::cout << "Not an int at line : " << lineCount << std::endl;
 		}
+		++lineCount;
 	}
 	std::cout << "Elf number " << elfCalorieList.size() << " has the most calories with: " << *elfCalorieList.rbegin() << std::endl;
 	//second highest elf
