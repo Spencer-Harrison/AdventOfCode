@@ -8,15 +8,10 @@ int main() {
 	
 	std::ifstream infile("./input.txt");
 
-	try {
-		if (!infile) {
-			throw -1;
-		}
-	}
-	catch(int){
+	if (!infile) {
 		std::cout << "Error: text filename \"input.txt\" --> No such file or directory.\n";
 		infile.close();
-		return EXIT_FAILURE;
+		return EXIT_FAILURE;	
 	}
 
 	//alternate idea fill up a set with each elf's total calories. Then print off the final 3 values. 
