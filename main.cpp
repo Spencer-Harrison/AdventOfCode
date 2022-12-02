@@ -10,7 +10,6 @@ int main() {
 
 	if (!infile) {
 		std::cout << "Error: text filename \"input.txt\" --> No such file or directory.\n";
-		infile.close();
 		return EXIT_FAILURE;	
 	}
 
@@ -22,7 +21,7 @@ int main() {
 	size_t lineCount = 0;
 	while (std::getline(infile, line)) {
 		try {
-			if (line.compare("") == 0) {
+			if (line.empty()) {
 				elfCalorieList.insert(calories);
 				calories = 0;
 			}
@@ -37,7 +36,5 @@ int main() {
 	}
 	
 	std::cout << "Total calories of top 3: " << *elfCalorieList.rbegin() + *std::next(elfCalorieList.rbegin()) + *std::next(elfCalorieList.rbegin(), 2) << std::endl;
-	
-	infile.close();
 	return EXIT_SUCCESS;
 }
