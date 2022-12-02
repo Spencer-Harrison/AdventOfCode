@@ -36,8 +36,7 @@ int main() {
 		++lineCount;
 	}
 	
-	size_t total = *elfCalorieList.rbegin() + *std::next(elfCalorieList.rbegin()) + *std::next(elfCalorieList.rbegin(), 2);
-	std::cout << "Total calories of top 3: " << total << std::endl;
+	std::cout << "Total calories of top 3: " << *elfCalorieList.rbegin() + *std::next(elfCalorieList.rbegin()) + *std::next(elfCalorieList.rbegin(), 2) << std::endl;
 	
 	infile.close();
 	return EXIT_SUCCESS;
