@@ -35,12 +35,6 @@ int main() {
 		}
 		++lineCount;
 	}
-	std::cout << "Elf number " << elfCalorieList.size() << " has the most calories with: " << *elfCalorieList.rbegin() << std::endl;
-	//second highest elf
-	std::cout << "Elf number " << elfCalorieList.size() - 1 << " has the second most calories with: " << *std::next(elfCalorieList.rbegin()) << std::endl;
-	//third highest elf
-	std::cout << "Elf number " << elfCalorieList.size() - 2 << " has the third most calories with: " << *std::next(elfCalorieList.rbegin(), 2) << std::endl;
-	
 	
 	size_t total = *elfCalorieList.rbegin() + *std::next(elfCalorieList.rbegin()) + *std::next(elfCalorieList.rbegin(), 2);
 	std::cout << "Total calories of top 3: " << total << std::endl;
