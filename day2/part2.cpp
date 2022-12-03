@@ -53,4 +53,5 @@ int main() {
 		}
 	}
 	std::cout << "your total with this strategy guide was: " << total << std::endl;
+	return EXIT_SUCCESS;
 }
