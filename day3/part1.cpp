@@ -6,10 +6,6 @@
 #include <chrono>
 
 int main() {
-	
-	//start timer
-	auto start = std::chrono::high_resolution_clock::now();
-
 	std::ifstream infile("./input.txt");
 
 	if (!infile) {
